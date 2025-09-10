@@ -1,51 +1,48 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title> JOAO MARCELO PEREIRA DE OLIVEIRA</title>
-  <meta name="description" content="JOAO MARCELO PEREIRA DE OLIVEIRA.">
+  <meta charset="UTF-8">
+  <title>Login My-Chat</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="scriptjs"  href="script.js">
 </head>
 <body>
-  <header>
-    <h1>JOAO MARCELO PEREIRA DE OLIVEIRA</h1>
-    <p>Estudante Desenvolvedor Front-end | HTML5.</p>
-  </header>
+  <div class="login-box">
+    <h2>Login do Chat</h2>
 
-  <main>
-    <section ="foto-perfil">
-      <h2 id="https://ibb.co/xZBSLKc">Foto de perfil</h2>
-      <figure>
-        <img src="c:\Users\Usuario\Documents\para perfil html.jpg" alt="Foto de Nome Sobrenome sorrindo" width="180" height="180">
-        <figcaption>Joao Marcelo Pereira de oliveira</figcaption>
-      </figure>
-    </section>
+    <form onsubmit="entrarNoChat(event)">
+      <label for="serverUrl">URL do Servidor:</label>
+      <input type="text" id="serverUrl" placeholder="http://localhost:3000">
 
-    <section aria-labelledby="contatos">
-      <h2 id="contatos">Contatos</h2>
-      <ul>
-        <li><strong>E-mail:</strong> <a href="mailto:seuemail@exemplo.com">joaomarcelo27032005@email.com</a></li>
-        <li><strong>Telefone:</strong> <a href="tel:+5599999999999">(86) 99444-6947</a></li>
-        <li><strong>GitHub:</strong> <a href="https://github.com/seuusuario">JOAO MARCELO PEREIRA DE OLIVEIRA
-Desenvolvedor Front-end | HTML5.
-Foto de perfil
-joao marcelo
-Contatos
-	•	E-mail: joaomarcelo@email.com
-	•	Telefone: +55 (86) 99444-6947
-	•	GitHub: https://github.com/joaomarcelo27032005-beep
-	•	Usuário do GitHub: joaomarcelo27032005-beep
-	•	Rede social: https://www.linkedin.com/in/jo%C3%A3o-marcelo-marcelo-705091264?
-Resumo profissional
-Sou estudante de Análise e Desenvolvimento de Sistemas, com experiência em administração e interesse em tecnologia,desenvolvimento web e suporte administrativo. Busco contribuir com minhas habilidades em organização, resolução de problemas e programação para agregar valor à equipe.”
-Última atualização: 15 de agosto de 2025-ia</a></li>
-        
-    </section>
-  </main>
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" placeholder="seuemail@exemplo.com">
 
-  <footer>
-    <p>Última atualização: <time datetime="2025-08-15">16 de agosto de 2025</time></p>
-  </footer>
+      <label for="nickname">Nickname:</label>
+      <input type="text" id="nickname" placeholder="Seu apelido">
+
+      <button type="submit">Entrar</button>
+    </form>
+  </div>
+
+  <script>
+    function entrarNoChat(event) {
+      event.preventDefault();
+
+      const serverUrl = document.getElementById('serverUrl').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const nickname = document.getElementById('nickname').value.trim();
+
+      if (!serverUrl || !email || !nickname) {
+        alert("Por favor, preencha todos os campos.");
+        return;
+      }
+
+      localStorage.setItem('chatServerUrl', serverUrl);
+      localStorage.setItem('chatEmail', email);
+      localStorage.setItem('chatNickname', nickname);
+
+      window.location.href = "index.html";
+    }
+  </script>
 </body>
-
 </html>

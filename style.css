@@ -1,0 +1,71 @@
+/* Fundo geral */
+body {
+  font-family: Arial, sans-serif;
+  background-color: rgb(49, 56, 18);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Caixa de login */
+.login-box {
+  background: #1e1e1e;
+  padding: 30px 35px;
+  border-radius: 12px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.5);
+  width: 100%;
+  max-width: 400px;
+  color: #fff;
+}
+
+/* Título */
+h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #4fa1e4;
+}
+
+/* Labels */
+label {
+  font-weight: bold;
+  color: rgb(79, 161, 228);
+  display: block;
+  margin-top: 15px;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+input {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #06d110;
+  border-radius: 8px;
+  font-size: 14px;
+  box-sizing: border-box;
+  transition: border 0.3s;
+}
+
+input:focus {
+  background-color: rgb(216, 216, 236);
+  outline: none;
+}
+
+/* Botão */
+button {
+  width: 100%;
+  margin-top: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: #4fa1e4;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+button:hover {
+  background-color: #3c87c3;
+}
